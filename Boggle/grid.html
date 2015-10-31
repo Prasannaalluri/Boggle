@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <META HTTP-EQUIV="refresh" CONTENT="60;URL=Pg5.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+<style>
+.wrapper {
+    width: 300px;
+    margin:0 auto;
+}
+.gameboard {
+    width: 170px;
+    height:170px;
+    border:2px solid;
+    z-index: 1;
+}
+.gameboard div {
+    width: 55px;
+    height: 55px;
+    float: left;
+}
+.middle {
+    border: 2px solid;
+}
+.button {
+    background-color:white;
+    width: 160px;
+    margin:0 auto;
+}
+.updown {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+.leftright {
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+</style>
+
+<head onload="startTime()">
+<br><br><h1>
+<center>
+<div id="txt"></div>
+</center>
+<script>
+
+var tt=setInterval(function(){startTime()},1000);
+var counter = 60;
+
+function startTime()
+
+{
+  if(counter == 0) {
+    clearInterval(tt);
+  } else {
+    counter--;
+  }
+
+document.getElementById("txt").innerHTML =  "0:"+counter;
+
+}
+
+function checkTime(tt)
+{
+if (tt==10)
+  {
+    tt="0" + tt;
+    console.log(tt);
+    clearInterval(tt);
+  }
+return tt;
+}
+</script>
+
+
+</head>
+<body onload="startTime()">
+<div id="txt">
+<center>
+
+<div class="wrapper">
+    <div class="gameboard">
+        <div><h3>f</h3></div>
+        <div class="leftright" align = "center"><h3>a</h3></div>
+        <div><h3>a</h3></div>
+        <div class="updown" align = "center"><h3>b</h3></div>
+        <div class="middle" align = "center"><h3>c</h3></div>
+        <div class="updown" align = "center"><h3>d</h3></div>
+        <div><h3>h</h3></div>
+        <div class="leftright" align = "center"><h3>e</h3></div>
+        <div><h3>g</h3></div>
+    </div>
+
+ <div><br><center>
+	<input type = "text">
+</center>
+</div></div>
+</center>
+</body>
+</html>
